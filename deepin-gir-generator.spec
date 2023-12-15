@@ -10,7 +10,7 @@ Group:          Development/Languages/Golang
 Url:            https://github.com/linuxdeepin/go-gir
 Source0:        https://github.com/linuxdeepin/go-gir/archive/v%{version}/%{_name}-%{version}.tar.gz
 
-BuildRequires:  golan
+BuildRequires:  golang
 BuildRequires:  pkgconfig(gobject-introspection-1.0)
 BuildRequires:  pkgconfig(gudev-1.0)
 BuildRequires:  pkgconfig(glib-2.0)
