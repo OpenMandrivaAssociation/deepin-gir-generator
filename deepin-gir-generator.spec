@@ -84,7 +84,8 @@ export GO111MODULE=off
 export CGO_ENABLED=1
 #goprep %{import_path}
 #gobuild ...
-go build
+#go build
+make
 
 %install
 go install
