@@ -80,8 +80,8 @@ generate the gdkpixbuf binding hasn't completed, so Gdk/Gtk were also in blockin
 %autosetup -p1 -n %{_name}-%{version}
 
 %build
-export GO111MODULE=off
-export CGO_ENABLED=1
+#export GO111MODULE=off
+#export CGO_ENABLED=1
 #goprep %{import_path}
 #gobuild ...
 #go build
