@@ -85,11 +85,11 @@ generate the gdkpixbuf binding hasn't completed, so Gdk/Gtk were also in blockin
 %install
 %goinstall
 
-install -m 0644 gio-2.0/gio.gen.c %{buildroot}%{go_contribsrcdir}/%{import_path}/gio-2.0
-install -m 0644 glib-2.0/glib.gen.c %{buildroot}%{go_contribsrcdir}/%{import_path}/glib-2.0
-install -m 0644 gobject-2.0/fix_gobject.c %{buildroot}%{go_contribsrcdir}/%{import_path}/gobject-2.0
-install -m 0644 gobject-2.0/gobject.gen.c %{buildroot}%{go_contribsrcdir}/%{import_path}/gobject-2.0
-install -m 0644 gudev-1.0/gudev.gen.c %{buildroot}%{go_contribsrcdir}/%{import_path}/gudev-1.0
+#install -m 0644 gio-2.0/gio.gen.c %{buildroot}%{go_contribsrcdir}/%{import_path}/gio-2.0
+#install -m 0644 glib-2.0/glib.gen.c %{buildroot}%{go_contribsrcdir}/%{import_path}/glib-2.0
+#install -m 0644 gobject-2.0/fix_gobject.c %{buildroot}%{go_contribsrcdir}/%{import_path}/gobject-2.0
+#install -m 0644 gobject-2.0/gobject.gen.c %{buildroot}%{go_contribsrcdir}/%{import_path}/gobject-2.0
+#install -m 0644 gudev-1.0/gudev.gen.c %{buildroot}%{go_contribsrcdir}/%{import_path}/gudev-1.0
 
 mv %{buildroot}%{_bindir}/generator %{buildroot}%{_bindir}/gir-generator
 mv %{buildroot}%{_bindir}/test %{buildroot}%{_bindir}/gir-test
