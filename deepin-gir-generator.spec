@@ -99,9 +99,9 @@ generate the gdkpixbuf binding hasn't completed, so Gdk/Gtk were also in blockin
 %defattr(-,root,root,-)
 %doc README.md documentation/WhyWaf.txt documentation/Design.txt
 %license LICENSE
-%{_bindir}/gir-generator
-%{_bindir}/gir-test
+#{_bindir}/gir-generator
+#{_bindir}/gir-test
 
 %files -n golang-github-linuxdeepin-go-gir-generator
 %defattr(-,root,root,-)
-%{go_contribsrcdir}/*
+#{go_contribsrcdir}/*
