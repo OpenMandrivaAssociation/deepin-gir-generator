@@ -85,7 +85,8 @@ generate the gdkpixbuf binding hasn't completed, so Gdk/Gtk were also in blockin
 #goprep %{import_path}
 #gobuild ...
 #go build
-make
+export GOPATH="%{gopath}"
+%make_build
 
 %install
 go install
