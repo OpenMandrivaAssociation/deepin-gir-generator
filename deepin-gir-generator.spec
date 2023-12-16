@@ -78,7 +78,8 @@ generate the gdkpixbuf binding hasn't completed, so Gdk/Gtk were also in blockin
 
 %prep
 %autosetup -p1 -n %{_name}-%{version}
-
+	
+sed -i "s/'Can'tFind'/“Can'tFind”/" lib.in/glib-2.0/keyfile_test.go
 %build
 #export GO111MODULE=off
 #export CGO_ENABLED=1
