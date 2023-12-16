@@ -80,7 +80,7 @@ generate the gdkpixbuf binding hasn't completed, so Gdk/Gtk were also in blockin
 %autosetup -p1 -n %{_name}-%{version}
 
 %build
-go build -v -o %{name} *.go
+go build *.go
 
 %install
 %goinstall
