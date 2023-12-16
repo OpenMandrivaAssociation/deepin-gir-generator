@@ -10,6 +10,7 @@ Group:          Development/Languages/Golang
 Url:            https://github.com/linuxdeepin/go-gir
 Source0:        https://github.com/linuxdeepin/go-gir/archive/v%{version}/%{_name}-%{version}.tar.gz
 
+BuildRequires:  compiler(golang)
 BuildRequires:  golang
 BuildRequires:  pkgconfig(gobject-introspection-1.0)
 BuildRequires:  pkgconfig(gudev-1.0)
@@ -80,15 +81,9 @@ generate the gdkpixbuf binding hasn't completed, so Gdk/Gtk were also in blockin
 %autosetup -p1 -n %{_name}-%{version}
 
 %build
-export GO111MODULE=off
-export CGO_ENABLED=1
-#goprep %{import_path}
-#gobuild ...
-#go build
-make
 
 %install
-go install
+%goinstall
 
 install -m 0644 gio-2.0/gio.gen.c %{buildroot}%{go_contribsrcdir}/%{import_path}/gio-2.0
 install -m 0644 glib-2.0/glib.gen.c %{buildroot}%{go_contribsrcdir}/%{import_path}/glib-2.0
