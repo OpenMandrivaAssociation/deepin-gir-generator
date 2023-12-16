@@ -1,3 +1,5 @@
+%define _empty_manifest_terminate_build 0
+
 %define   _name           go-gir
 %define   import_path     github.com/linuxdeepin/go-gir
 
